@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Awesome Quiz App | CodingNepal</title>
+    <!-- FontAwesome CDN Link for Icons-->
+    <link rel="stylesheet" href="stylesheet.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <div class="user_info">
+        <!-- <title class="fa fa-road" style="color:black;">TestBook</title> -->
+        <img src="https://netrockdeals.sirv.com/WP_netrockdeals.com/2020/01/T/e/k/Testbook.jpg" alt="">WelCome Quiz!
+        <h1 style="color:coral;">Firstly please enter your name.</h1>
+        <label for="tbuser" style="color:darkorchid;">User Name</label>
+        <input type="text" id="user_info2" placeholder="Enter your name">
+        <input type="button" id="btn1" value="Submit" class="btn2">
+    </div>
+    <!-- Start Quiz Button  -->
+    <div class="start_btn"><button>Start Quiz</button></div>
+    </div>
+
+    <!-- info Box -->
+    <div class="info_box">
+        <div class="info_title">
+            <span style="color:rgb(54, 224, 224);">
+                <h3>Hello User </h3>
+            </span> -->
+            <span>Some Rules of this Quiz</span>
+        </div>
+        <div class="info_list">
+            <div class="info">1. You will have only <span>10 Seconds</span> per each question.</div>
+            <div class="info">2. Once you select your answer, you can't reselect.</div>
+            <div class="info">3. You can't select any option once time goes off.</div>
+            <div class="info">4. You can't exit from the Quiz while you're playing.</div>
+            <div class="info">5. You'll get points on the basis of your correct answers.</div>
+            <div class="info"><h2 style="color:rgb(54, 224, 224);">Select Category</h2></div>
+        </div>
+        <div class="buttons">
+
+            <button class="quit">Exit Quiz</button>
+            <button class="restart">Compueter Basic</button>
+            <button class="quiz_section1" id="quiz_sections1">Bootstrap</button>
+            <button class="quiz_section2" id="quiz_sections2">DBMS</button>
+            <button class="quiz_section3" id="quiz_sections3">English</button>
+
+        </div>
+
+    </div>
+
+    <!-- Quiz Box -->
+    <div class="quiz_box">
+        <header>
+            <div class="title">Awesome Quiz Application</div>
+            <div class="timer">
+                <div class="time_text">Time Left</div>
+                <div class="time_sec">10</div>
+            </div>
+            <div class="time_line"></div>
+        </header>
+        <section>
+            <div class="quiz_text">
+                <span>What does HTML stand for?</span>
+            </div>
+            <div class="option_list">
+                <div class="option">
+                    <span>Hyper Text Preprocessor</span>
+                    <div class="icon tick"><i class="fas fa-check"></i></div>
+                </div>
+                <div class="option">
+                    <span>Hyper Text Markup Language</span>
+                    <div class="icon cross"><i class="fas fa-times"></i></div>
+                </div>
+                <div class="option">
+                    <span>Hyper Text Multiple Language</span>
+                </div>
+                <div class="option">
+                    <span>Hyper Tool Multi Language</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quiz Box Footer -->
+
+        <footer>
+            <div class="total_que">
+                <span>
+                    <p>2</p>of<p>10</p>Questions
+                </span>
+            </div>
+            <button class="next_btn">Next Que</button>
+        </footer>
+    </div>
+
+    <!-- Result Box -->
+    <div class="result_box">
+        <div class="icon">
+            <i class="fas fa-crown"></i>
+        </div>
+        <div class="user_name">
+            Name : <span class="output" id="output_user"></span>
+        </div>
+        <div class="complete_text">You've completed the Quiz!</div>
+
+        <div class="score_text">
+            <span>and sorry, You got only <p>2</p> out of <p>5</p></span>
+        </div>
+        <div class="buttons">
+            <button class="restart">Replay Quiz</button>
+            <button class="quit">"Quit Quiz</button>
+        </div>
+    </div>
+
+
+    <script>
+        const txt1 = document.getElementById('user_info2');
+        const btn1 = document.getElementById('btn1');
+        const out1 = document.getElementById('output_user');
+
+        function fun1() {
+            out1.innerHTML = txt1.value;
+        }
+        btn1.addEventListener('click', fun1);
+    </script>
+
+
+    <script src="js/script.js"></script>
+    <script src="js/questions.js"></script>
+    <script src="js/questions2.js"></script>
+    <script src="js/questions3.js"></script>
+    <script src="js/questions4.js"></script>
+</body>
+
+</html>
